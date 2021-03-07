@@ -28,11 +28,11 @@ function CategoryScreen({navigation}) {
                 //how to extract key to value
                 <TouchableOpacity onPress={pressHandler}>
                     <Card>
-                        {/* <Image 
+                        <Image 
                         style={globalStyles.image}
                         source={require('../assets/categoryImages/category-' + '1.2' + '.png')}
-                        /> */}
-                        <Text style={globalStyles.blub}> blub</Text>
+                        />
+                        {/* <Text style={globalStyles.blub}> blub</Text> */}
                         <Text style={globalStyles.itemText}>
                             {item.category}
                         </Text>

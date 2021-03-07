@@ -9,18 +9,16 @@ export const globalStyles = StyleSheet.create({
         textAlign:'center',
         marginHorizontal: 50,
         marginVertical: 20,
-        backgroundColor: 'red',
     },
     itemText:{
         fontSize: 25,
-        // flex: 1,
+        flex: 1,
         paddingTop: 17,
-        marginLeft: 20,
-        backgroundColor: 'red',
+        // marginLeft: 20,
 
     },
-    blub: {
+    image: {
         flex: 0.3,
-        backgroundColor: 'red',
+        resizeMode: 'cover'
     }
 })
