@@ -9,9 +9,18 @@ const Stack = createStackNavigator()
 
 function ExerciseStack(){
     return (
-          <Stack.Navigator initialRouteName="Category">
-            <Stack.Screen name="Category" component={CategoryScreen} />
-            <Stack.Screen name="Exercise" component={ExerciseScreen} />
+          <Stack.Navigator 
+          initialRouteName="Category">
+            <Stack.Screen 
+            name="Category" 
+            component={CategoryScreen} 
+            options={{title: null}}
+            />
+            <Stack.Screen 
+            name="Exercise" 
+            component={ExerciseScreen} 
+            options={{title: null}}
+            />
           </Stack.Navigator>
       );
     }
