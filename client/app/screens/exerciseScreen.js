@@ -3,14 +3,14 @@ import { View, Text, TouchableOpacity } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler';
 
 import {globalStyles}  from '../styles/global'
-import {ArmRaiseList, SurfaceList, GaitList, StandingList, WeightShiftingList} from '../assets/list/list'
+import {ArmRaiseList, SurfaceList, GaitList, StandingList, WeightShiftingList, List} from '../assets/list/list'
 
 function ExerciseScreen(props) {
     return (
        <View style={globalStyles.container}>
         <Text style={globalStyles.titleText}>Choose Exercise</Text>
         <FlatList
-            data={SurfaceList}
+            data={ArmRaiseList}
             renderItem={({item}) => (
                 <TouchableOpacity 
                 // onPress={pressHandler}

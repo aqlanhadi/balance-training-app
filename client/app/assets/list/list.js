@@ -6,14 +6,54 @@ export const CategoryList =[
     { id:'5', category: 'Weight Shifting' }
 ]
 
-export const ArmRaiseList =[
-    { id:'1', category: 'Firm Surface' },
-    { id:'2', category: 'Firm Eyes Closed' },
-    { id:'3', category: 'Toes Down' },
-    { id:'4', category: 'Toes Down Eyes Closed' },
-    { id:'5', category: 'Toes Up' },
-    { id:'6', category: 'Toes Up Eyes Closed' }
+export const List =[
+    {id: '1', category: 'Arm Raise', exercise: 'Firm Surface'},
+    {id: '2', category: 'Arm Raise', exercise: 'Firm Eyes Closed'},
+    {id: '3', category: 'Arm Raise', exercise: 'Toes Down'},
+    {id: '4', category: 'Arm Raise', exercise: 'Toes Down Eyes Closed'},
+    {id: '5', category: 'Arm Raise', exercise: 'Toes Up'},
+    {id: '6', category: 'Arm Raise', exercise: 'Toes Up Eyes Closed'},
+
+    {id: '7', category: 'Compliant Surface', exercise: 'Feet Apart'},
+    {id: '8', category: 'Compliant Surface', exercise: 'Feet Heel to Toe'},
+    {id: '9', category: 'Compliant Surface', exercise: 'Feet Together'},
+    {id: '10', category: 'Compliant Surface', exercise: 'Partial Heel to Toe'},
+
+    {id: '11', category: 'Gait', exercise: 'Backward Walking'},
+    {id: '12', category: 'Gait', exercise: 'Fast Speed'},
+    {id: '13', category: 'Gait', exercise: 'Figure 8'},
+    {id: '14', category: 'Gait', exercise: 'Forward on Heels'},
+    {id: '15', category: 'Gait', exercise: 'Forward on Toes'},
+    {id: '16', category: 'Gait', exercise: 'High March'},
+    {id: '17', category: 'Gait', exercise: 'Normal Speed'},
+    {id: '18', category: 'Gait', exercise: 'Side Head Turns'},
+    {id: '19', category: 'Gait', exercise: 'Side Stepping'},
+    {id: '20', category: 'Gait', exercise: 'Slow Speed'},
+    {id: '21', category: 'Gait', exercise: 'Step Over Shoebox'},
+    {id: '22', category: 'Gait', exercise: 'Tandem Backward'},
+    {id: '23', category: 'Gait', exercise: 'Tandem Forward'},
+    {id: '24', category: 'Gait', exercise: 'Vertical Head Turns'},
+
+    {id: '25', category: 'Static Standing', exercise: 'Feet Heel to Toe'},
+    {id: '26', category: 'Static Standing', exercise: 'Feet Together'},
+    {id: '27', category: 'Static Standing', exercise: 'Partial Heel to Toe'},
+    {id: '28', category: 'Static Standing', exercise: 'Single Leg'},
+
+    {id: '29', category: 'Weight Shifting', exercise: 'Front to Back'},
+    {id: '30', category: 'Weight Shifting', exercise: 'Front to Back Eyes Closed'},
+    {id: '31', category: 'Weight Shifting', exercise: 'Front to Back Foam'},
+    {id: '32', category: 'Weight Shifting', exercise: 'Front to Back Eyes Closed'},
+    {id: '33', category: 'Weight Shifting', exercise: 'Side to Side'},
+    {id: '34', category: 'Weight Shifting', exercise: 'Side to Side Eyes Closed'},
+    {id: '35', category: 'Weight Shifting', exercise: 'Side to Side Foam'},
+    {id: '36', category: 'Weight Shifting', exercise: 'Side to Side Foam Eyes Closed'},
 ]
+
+export const ArmRaiseList = List.filter(function(category, exercise){
+    if (category.category === 'Arm Raise'){
+        return exercise.exercise
+    }
+})
 
 export const SurfaceList =[
     { id:'1', category: 'Feet Apart' },

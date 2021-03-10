@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler';
 
 import {globalStyles}  from '../styles/global'
-import {CategoryList} from '../assets/list/list'
+import {CategoryList, List} from '../assets/list/list'
 import ExerciseScreen from './exerciseScreen';
 
 function CategoryScreen({navigation}) {

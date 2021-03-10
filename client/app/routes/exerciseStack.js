@@ -4,16 +4,22 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import CategoryScreen from '../screens/categoryScreen'
 import ExerciseScreen from '../screens/exerciseScreen'
+import LoginScreen from '../screens/loginScreen'
 
 const Stack = createStackNavigator()
 
 function ExerciseStack(){
     return (
           <Stack.Navigator 
-          initialRouteName="Category">
+          initialRouteName="Login">
             <Stack.Screen 
             name="Category" 
             component={CategoryScreen} 
+            options={{title: null}}
+            />
+            <Stack.Screen 
+            name="Login" 
+            component={LoginScreen} 
             options={{title: null}}
             />
             <Stack.Screen 

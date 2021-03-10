@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import ExerciseStack from './app/routes/exerciseStack'
 import ProgressStack from './app/routes/progressStack'
 import DataStack from './app/routes/dataStack'
+import LoginScreen from './app/screens/loginScreen'
 
 const Tab = createBottomTabNavigator();
 
