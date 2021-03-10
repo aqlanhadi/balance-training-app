@@ -41,7 +41,10 @@ build/Release
 .expo
 node_modules/
 jspm_packages/
+client/.expo/
 client/node_modules/
+Tutorial_App/timer/.expo/
+Tutorial_App/timer/node_modules
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
@@ -116,3 +119,5 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+.nova/
