@@ -49,11 +49,13 @@ export const List =[
     {id: '36', category: 'Weight Shifting', exercise: 'Side to Side Foam Eyes Closed'},
 ]
 
-export const ArmRaiseList = List.filter(function(category, exercise){
-    if (category.category === 'Arm Raise'){
-        return exercise.exercise
-    }
-})
+// export const ArmRaiseList = List.filter(function(category, exercise){
+//     if (category.category === 'Arm Raise'){
+//         return exercise.exercise
+//     }
+// })
+
+export const ArmRaiseList = List.filter(item => item.category === 'Arm Raise')
 
 export const SurfaceList =[
     { id:'1', category: 'Feet Apart' },

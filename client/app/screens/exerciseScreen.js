@@ -5,18 +5,20 @@ import { FlatList } from 'react-native-gesture-handler';
 import {globalStyles}  from '../styles/global'
 import {ArmRaiseList, SurfaceList, GaitList, StandingList, WeightShiftingList, List} from '../assets/list/list'
 
-function ExerciseScreen(props) {
+function ExerciseScreen({route, navigation}) {
+    const { category }  = route.params
+    //console.log(category)
     return (
        <View style={globalStyles.container}>
         <Text style={globalStyles.titleText}>Choose Exercise</Text>
         <FlatList
-            data={ArmRaiseList}
+            data={List.filter(item => item.category === category)}
             renderItem={({item}) => (
                 <TouchableOpacity 
                 // onPress={pressHandler}
                 style={globalStyles.card}>
                     <View style={globalStyles.cardContent}>    
-                        <Text style={globalStyles.itemText}>{item.category}</Text>
+                        <Text style={globalStyles.itemText}>{item.exercise}</Text>
                         </View>
                 </TouchableOpacity>
                 
