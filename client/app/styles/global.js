@@ -25,14 +25,14 @@ export const globalStyles = StyleSheet.create({
     },
     itemText:{
         fontSize: 25,
+        flexWrap: 'wrap',
         flex: 1,
-        paddingTop: 17,
+        paddingVertical: 15,
         // marginLeft: 20,
-
     },
     image: {
         flex: 0.3,
-        resizeMethod: 'resize',
-        resizeMode: 'cover',
+        // resizeMethod: 'resize',
+        resizeMode: 'contain',
     }
 })

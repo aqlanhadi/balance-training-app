@@ -96,3 +96,11 @@ export const WeightShiftingList =[
     { id:'7', category: 'Side to Side Foam' },
     { id:'8', category: 'Side to Side Foam Eyes Closed' }
 ]
+
+export const RatingList =[
+    { id:'1', category: 'I feel completely steady' },
+    { id:'2', category: 'I feel a little unsteady or off-balance' },
+    { id:'3', category: 'I feel somewhat unsteady or like I may lose my balance' },
+    { id:'4', category: 'I feel very unsteady or like I will lose my balance' },
+    { id:'5', category: 'I lost my balance' },
+]
