@@ -7,6 +7,7 @@ export const CategoryList =[
 ]
 
 export const List =[
+    // Arm Raise Exercises 
     {id: '1', category: 'Arm Raise', exercise: 'Firm Surface'},
     {id: '2', category: 'Arm Raise', exercise: 'Firm Eyes Closed'},
     {id: '3', category: 'Arm Raise', exercise: 'Toes Down'},
@@ -14,11 +15,13 @@ export const List =[
     {id: '5', category: 'Arm Raise', exercise: 'Toes Up'},
     {id: '6', category: 'Arm Raise', exercise: 'Toes Up Eyes Closed'},
 
+    // Compliant Surface Exercises
     {id: '7', category: 'Compliant Surface', exercise: 'Feet Apart'},
     {id: '8', category: 'Compliant Surface', exercise: 'Feet Heel to Toe'},
     {id: '9', category: 'Compliant Surface', exercise: 'Feet Together'},
     {id: '10', category: 'Compliant Surface', exercise: 'Partial Heel to Toe'},
 
+    // Gait Exercises
     {id: '11', category: 'Gait', exercise: 'Backward Walking'},
     {id: '12', category: 'Gait', exercise: 'Fast Speed'},
     {id: '13', category: 'Gait', exercise: 'Figure 8'},
@@ -34,11 +37,13 @@ export const List =[
     {id: '23', category: 'Gait', exercise: 'Tandem Forward'},
     {id: '24', category: 'Gait', exercise: 'Vertical Head Turns'},
 
+    // Static Standing Exercises
     {id: '25', category: 'Static Standing', exercise: 'Feet Heel to Toe'},
     {id: '26', category: 'Static Standing', exercise: 'Feet Together'},
     {id: '27', category: 'Static Standing', exercise: 'Partial Heel to Toe'},
     {id: '28', category: 'Static Standing', exercise: 'Single Leg'},
 
+    // Weight Shifting Exercises
     {id: '29', category: 'Weight Shifting', exercise: 'Front to Back'},
     {id: '30', category: 'Weight Shifting', exercise: 'Front to Back Eyes Closed'},
     {id: '31', category: 'Weight Shifting', exercise: 'Front to Back Foam'},
@@ -49,11 +54,13 @@ export const List =[
     {id: '36', category: 'Weight Shifting', exercise: 'Side to Side Foam Eyes Closed'},
 ]
 
-export const ArmRaiseList = List.filter(function(category, exercise){
-    if (category.category === 'Arm Raise'){
-        return exercise.exercise
-    }
-})
+// export const ArmRaiseList = List.filter(function(category, exercise){
+//     if (category.category === 'Arm Raise'){
+//         return exercise.exercise
+//     }
+// })
+
+export const ArmRaiseList = List.filter(item => item.category === 'Arm Raise')
 
 export const SurfaceList =[
     { id:'1', category: 'Feet Apart' },

@@ -16,10 +16,12 @@ function CategoryScreen({navigation}) {
         <View style={globalStyles.container}>
         <Text style={globalStyles.titleText}>Choose Category</Text>
         <FlatList
-            data={CategoryList}
+            data={List}
             renderItem={({item}) => (
                 <TouchableOpacity 
-                onPress={pressHandler}
+                onPress={() => {
+                    navigation.navigate('Exercise', {category:item.category})
+                }}
                 style={globalStyles.card}>
                     <View style={globalStyles.cardContent}> 
                         <Image 
