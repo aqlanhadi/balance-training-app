@@ -15,7 +15,10 @@ function ExerciseScreen({route, navigation}) {
             data={List.filter(item => item.category === category)}
             renderItem={({item}) => (
                 <TouchableOpacity 
-                onPress={pressHandler}
+                // onPress={pressHandler}
+                onPress={() => {
+                    navigation.navigate('Rating')
+                }}
                 style={globalStyles.card}>
                     <View style={globalStyles.cardContent}>    
                         <Text style={globalStyles.itemText}>{item.exercise}</Text>
