@@ -2,9 +2,9 @@ import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack'
 
 
-import CategoryScreen from '../screens/categoryScreen'
-import ExerciseScreen from '../screens/exerciseScreen'
-import LoginScreen from '../screens/loginScreen'
+import HomeScreen from '../screens/homeScreen'
+import SensorScreen from '../screens/sensorScreen'
+import UserScreen from '../screens/userScreen'
 
 const Stack = createStackNavigator()
 
@@ -13,13 +13,18 @@ function ExerciseStack(){
           <Stack.Navigator 
           initialRouteName="Category">
             <Stack.Screen 
-            name="Category" 
-            component={CategoryScreen} 
+            name="Home" 
+            component={HomeScreen} 
             options={{title: null}}
             />
             <Stack.Screen 
-            name="Exercise" 
-            component={ExerciseScreen} 
+            name="IMU" 
+            component={SensorScreen} 
+            options={{title: null}}
+            />
+            <Stack.Screen 
+            name="User" 
+            component={UserScreen} 
             options={{title: null}}
             />
           </Stack.Navigator>

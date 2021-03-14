@@ -2,22 +2,23 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native'
 
 import {globalStyles} from '../styles/global'
+import {AuthContext} from '../routes/context'
 
 function LoginScreen({navigation}) {
-    const [id, setId] = useState('');
-    const pressHandler = () => {
-        navigation.navigate('Category')
-    }
+    const [userId, setUserId] = useState('');
+
+    const { signIn } = React.useContext(AuthContext);
+
     return (
        <View style={styles.screen}>
         <Text style={globalStyles.titleText}>Welcome!</Text>
             <TextInput 
             style={styles.input}
             placeholder="User ID"
-            onChangeText={id => setId(id)}
+            onChangeText={setUserId}
             />
                 <TouchableOpacity 
-                onPress={pressHandler}
+                onPress={() => signIn()}
                 style={globalStyles.card}>
                     <View style={globalStyles.cardContent}> 
                         <Text style={styles.text}>

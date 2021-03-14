@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, {useState, useEffect} from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -6,17 +6,99 @@ import ExerciseStack from './app/routes/exerciseStack'
 import ProgressStack from './app/routes/progressStack'
 import DataStack from './app/routes/dataStack'
 import LoginScreen from './app/screens/loginScreen'
+import HomeStack from './app/routes/homeStack'
+import { ActivityIndicator, View } from 'react-native';
+import { globalStyles } from './app/styles/global';
+import {AuthContext} from './app/routes/context'
 
 const Tab = createBottomTabNavigator();
 
-export default function TabNavigator() {
+export default function App() {
+//   const [state, dispatch] = React.useReducer(
+//     (prevState, action) => {
+//     switch (action.type){
+//       case 'RESTORE_TOKEN':
+//         return {
+//           ...prevState,
+//           userToken: action.token,
+//           isLoading: false,
+//         }
+//       case 'LOGIN':
+//         return{
+//           ...prevState,
+//           userId:action.id,
+//           userToken: action.token,
+//           isLoading: false,
+//         }
+//       case 'LOGOUT':
+//         return {
+//           ...prevState,
+//           userId:null,
+//           userToken: null,
+//           isLoading: false,
+//         };
+//     }},
+//     {
+//       isLoading: true,
+//       userId: null,
+//       userToken: null
+//     }
+//   )
+  
+//   const authContext = React.useMemo(() => ({
+//     signIn: (userId) => {
+//       let userToken;
+//       userId = null
+//       if (userId === '123'){
+//         userToken ='abc'
+//       }
+//       dispatch({type: 'LOGIN', id: userId, token: userToken})
+//     },
+//     signOut: () => {
+//       setUserToken(null)
+//       setIsLoading(false)
+//     }
+//   }))
+
+//   useEffect(() => {
+//     setTimeout(() => {
+//       dispatch({type: 'RETRIEVE_TOKEN', token: 'def'})}, 1000)
+//   }, [])
+
+//   if(action().isLoading){
+//     return (
+//       <View style={globalStyles.container}>
+//         <ActivityIndicator size="large"/>
+//       </View>
+//     )
+//   }
+    // return (
+    //   <AuthContext.Provider value={authContext}>
+    //   <NavigationContainer>
+
+    //     <Tab.Navigator>
+    //         <Tab.Screen name="Home" component={HomeStack} />
+    //         <Tab.Screen name="Exercise" component={ExerciseStack} />
+    //         <Tab.Screen name="Progress" component={ProgressStack} />
+    //         <Tab.Screen name="Data" component={DataStack} />
+    //     </Tab.Navigator>
+    //    )
+    //    :
+    //      <LoginScreen/> */}
+    //    </NavigationContainer>
+    //   </AuthContext.Provider>
+    // );
+
     return (
-      <NavigationContainer>
+        <NavigationContainer>
         <Tab.Navigator>
-          <Tab.Screen name="Exercise" component={ExerciseStack} />
-          <Tab.Screen name="Progress" component={ProgressStack} />
-          <Tab.Screen name="Data" component={DataStack} />
+            <Tab.Screen name="Home" component={HomeStack} />
+            <Tab.Screen name="Exercise" component={ExerciseStack} />
+            <Tab.Screen name="Progress" component={ProgressStack} />
+            <Tab.Screen name="Data" component={DataStack} />
         </Tab.Navigator>
-      </NavigationContainer>
-    );
+        </NavigationContainer>
+    )
   }
+
+  

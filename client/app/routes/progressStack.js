@@ -9,7 +9,10 @@ const Stack = createStackNavigator()
 function ProgressStack(){
     return (
           <Stack.Navigator initialRouteName="Progress">
-            <Stack.Screen name="Progress" component={ProgressScreen} />
+            <Stack.Screen 
+            name="Progress" 
+            component={ProgressScreen}
+            options={{title: null}} />
           </Stack.Navigator>
       );
     }

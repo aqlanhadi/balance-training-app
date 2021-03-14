@@ -7,14 +7,11 @@ import {CategoryList, List} from '../assets/list/list'
 import ExerciseScreen from './exerciseScreen';
 
 function CategoryScreen({navigation}) {
-    // const pressHandler = () => {
-    //     navigation.navigate('Exercise')
-    // }
     return (
        <View style={globalStyles.container}>
         <Text style={globalStyles.titleText}>Choose Category</Text>
         <FlatList
-            data={List}
+            data={CategoryList}
             renderItem={({item}) => (
                 <TouchableOpacity 
                 onPress={() => {
@@ -22,10 +19,10 @@ function CategoryScreen({navigation}) {
                 }}
                 style={globalStyles.card}>
                     <View style={globalStyles.cardContent}> 
-                        {/* <Image 
+                        <Image 
                         style={globalStyles.image}
                         source={require(`../assets/categoryImages/category-${item.id}.png`)}
-                        /> */}
+                        />
                         <Text style={globalStyles.itemText}>
                             {item.category}
                         </Text>

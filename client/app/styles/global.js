@@ -27,7 +27,7 @@ export const globalStyles = StyleSheet.create({
         fontSize: 25,
         flex: 1,
         paddingTop: 17,
-        // marginLeft: 20,
+        marginLeft: 20,
 
     },
     image: {

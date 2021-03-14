@@ -7,7 +7,6 @@ import {ArmRaiseList, SurfaceList, GaitList, StandingList, WeightShiftingList, L
 
 function ExerciseScreen({route, navigation}) {
     const { category }  = route.params
-    //console.log(category)
     return (
        <View style={globalStyles.container}>
         <Text style={globalStyles.titleText}>Choose Exercise</Text>

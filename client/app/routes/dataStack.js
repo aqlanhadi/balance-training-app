@@ -9,7 +9,11 @@ const Stack = createStackNavigator()
 function DataStack(){
     return (
           <Stack.Navigator initialRouteName="Data">
-            <Stack.Screen name="Data" component={DataScreen} />
+            <Stack.Screen 
+            name="Data" 
+            component={DataScreen} 
+            options={{title: null}}
+            />
           </Stack.Navigator>
       );
     }
