@@ -8,13 +8,16 @@ import {ArmRaiseList, SurfaceList, GaitList, StandingList, WeightShiftingList, L
 function ExerciseScreen({route, navigation}) {
     const { category }  = route.params
     return (
-       <View style={globalStyles.container}>
+        <View style={globalStyles.container}>
         <Text style={globalStyles.titleText}>Choose Exercise</Text>
         <FlatList
             data={List.filter(item => item.category === category)}
             renderItem={({item}) => (
                 <TouchableOpacity 
                 // onPress={pressHandler}
+                onPress={() => {
+                    navigation.navigate('Rating')
+                }}
                 style={globalStyles.card}>
                     <View style={globalStyles.cardContent}>    
                         <Text style={globalStyles.itemText}>{item.exercise}</Text>

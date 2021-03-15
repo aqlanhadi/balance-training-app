@@ -8,7 +8,7 @@ import ExerciseScreen from './exerciseScreen';
 
 function CategoryScreen({navigation}) {
     return (
-       <View style={globalStyles.container}>
+        <View style={globalStyles.container}>
         <Text style={globalStyles.titleText}>Choose Category</Text>
         <FlatList
             data={CategoryList}
