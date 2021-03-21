@@ -8,10 +8,10 @@ import ExerciseStack from './app/routes/exerciseStack'
 import ProgressStack from './app/routes/progressStack'
 import DataStack from './app/routes/dataStack'
 import LoginScreen from './app/screens/loginScreen'
-import HomeStack from './app/routes/homeStack'
 import { ActivityIndicator, View } from 'react-native';
 import { globalStyles } from './app/styles/global';
 import {AuthContext} from './app/routes/context'
+import HomeScreen from './app/screens/homeScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -98,13 +98,15 @@ export default function App() {
             tabBarIcon: ({ focused, color, size }) => {
               let iconName;
   
-              if (route.name === 'Exercise') {
-                iconName = focused ? 'barbell' : 'barbell-outline';
-              } else if (route.name === 'Progress') {
-                iconName = focused ? 'hourglass' : 'hourglass-outline';
-              } else if (route.name === 'Data') {
-                iconName = focused ? 'bar-chart' : 'bar-chart-outline';
-              }
+            if (route.name === 'Home') {
+                iconName = focused ? 'home' : 'home-outline';
+            } else if (route.name === 'Exercise') {
+            iconName = focused ? 'barbell' : 'barbell-outline';
+            } else if (route.name === 'Progress') {
+            iconName = focused ? 'hourglass' : 'hourglass-outline';
+            } else if (route.name === 'Data') {
+            iconName = focused ? 'bar-chart' : 'bar-chart-outline';
+            }
   
               // You can return any component that you like here!
               return <Ionicons name={iconName} size={size} color={color} />;
@@ -115,9 +117,10 @@ export default function App() {
             inactiveTintColor: 'gray',
           }}
         >
-          <Tab.Screen name="Exercise" component={ExerciseStack} />
-          <Tab.Screen name="Progress" component={ProgressStack} />
-          <Tab.Screen name="Data" component={DataStack} />
+            <Tab.Screen name="Home" component={HomeScreen} />
+            <Tab.Screen name="Exercise" component={ExerciseStack} />
+            <Tab.Screen name="Progress" component={ProgressStack} />
+            <Tab.Screen name="Data" component={DataStack} />
         </Tab.Navigator>
         </NavigationContainer>
     )

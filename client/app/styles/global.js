@@ -27,8 +27,8 @@ export const globalStyles = StyleSheet.create({
         fontSize: 25,
         flexWrap: 'wrap',
         flex: 1,
-        paddingVertical: 15,
-        // marginLeft: 20,
+        paddingVertical: 13,
+        marginLeft: 10,
     },
     image: {
         flex: 0.3,

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native'
+import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler';
 
 import {globalStyles}  from '../styles/global'
@@ -7,7 +7,7 @@ import {RatingList,List} from '../assets/list/list'
 
 function RatingScreen({navigation}) {
     const pressHandler = () => {
-        navigation.navigate('Exercise')
+        navigation.navigate('Category')
     }
     return (
         <View style={globalStyles.container}>
@@ -18,14 +18,16 @@ function RatingScreen({navigation}) {
             renderItem={({item}) => (
                 <TouchableOpacity 
                     onPress={pressHandler}
-                    style={globalStyles.card}>
-                        <View style={globalStyles.cardContent}>    
-                            <Image 
-                                source={{uri:'https://picsum.photos/100'}}
-                                style={globalStyles.image}
-                                // source={require=('../assets/emojis/happy-4.png')}
-                            />
-                            <Text style={globalStyles.itemText}>{item.category}</Text>
+                    style={{
+                            borderRadius: 8,
+                            elevation: 4,
+                            backgroundColor: item.backgroundColor,
+                            marginHorizontal: 40,
+                            marginVertical: 20,
+                            height: 65
+                            }}>
+                        <View style={styles.cardContent}>    
+                            <Text style={styles.text}>{item.category}</Text>
                         </View>
                 </TouchableOpacity>
                 
@@ -36,3 +38,19 @@ function RatingScreen({navigation}) {
 }
 
 export default RatingScreen;
+
+const styles = StyleSheet.create ({
+    text: {
+        fontSize: 18,
+        flexWrap: 'wrap',
+        flex: 1,
+        paddingVertical: 10,
+        paddingLeft : 5,
+        textAlignVertical: 'center'
+    },
+    cardContent: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
+})

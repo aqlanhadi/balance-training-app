@@ -21,7 +21,7 @@ function CategoryScreen({navigation}) {
                     <View style={globalStyles.cardContent}> 
                         <Image 
                         style={globalStyles.image}
-                        source={require(`../assets/categoryImages/category-${item.id}.png`)}
+                        source= {item.img}
                         />
                         <Text style={globalStyles.itemText}>
                             {item.category}

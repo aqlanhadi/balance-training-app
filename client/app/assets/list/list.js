@@ -1,9 +1,9 @@
 export const CategoryList =[
-    { id:'1', category: 'Arm Raise' },
-    { id:'2', category: 'Compliant Surface' },
-    { id:'3', category: 'Gait' },
-    { id:'4', category: 'Static Standing' },
-    { id:'5', category: 'Weight Shifting' }
+    { id:'1', category: 'Arm Raise', img:require('../categoryImages/category-1.png')},
+    { id:'2', category: 'Compliant Surface', img:require('../categoryImages/category-2.png')},
+    { id:'3', category: 'Gait' , img:require('../categoryImages/category-3.png')},
+    { id:'4', category: 'Static Standing' , img:require('../categoryImages/category-4.png')},
+    { id:'5', category: 'Weight Shifting' , img:require('../categoryImages/category-5.png')},
 ]
 
 export const List =[
@@ -52,4 +52,12 @@ export const List =[
     {id: '34', category: 'Weight Shifting', exercise: 'Side to Side Eyes Closed'},
     {id: '35', category: 'Weight Shifting', exercise: 'Side to Side Foam'},
     {id: '36', category: 'Weight Shifting', exercise: 'Side to Side Foam Eyes Closed'},
+]
+
+export const RatingList =[
+    { id:'1', category: '1. I feel completely steady', backgroundColor: '#56C596' },
+    { id:'2', category: '2. I feel a little unsteady or off-balance', backgroundColor: '#CFF4D2' },
+    { id:'3', category: '3. I feel somewhat unsteady or like I may lose my balance', backgroundColor: '#FFDCA2' },
+    { id:'4', category: '4. I feel very unsteady or like I will lose my balance', backgroundColor: '#FFBD71' },
+    { id:'5', category: '5. I lost my balance', backgroundColor: '#FE6768' },
 ]
