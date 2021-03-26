@@ -4,7 +4,7 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-nativ
 import {globalStyles} from '../styles/global'
 import {AuthContext} from '../routes/context'
 
-function LoginScreen({navigation}) {
+function LoginScreen() {
     const [userId, setUserId] = useState('');
 
     const { signIn } = React.useContext(AuthContext);
@@ -18,7 +18,7 @@ function LoginScreen({navigation}) {
             onChangeText={setUserId}
             />
                 <TouchableOpacity 
-                onPress={() => signIn()}
+                onPress={() => signIn({userId})}
                 style={globalStyles.card}>
                     <View style={globalStyles.cardContent}> 
                         <Text style={styles.text}>

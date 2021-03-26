@@ -6,6 +6,13 @@ export const CategoryList =[
     { id:'5', category: 'Weight Shifting' , img:require('../categoryImages/category-5.png')},
 ]
 
+export const IMUList =[
+    { id: '1', model: 'blub 1', battery: '10%', switchStatus: false},
+    { id: '2', model: 'blub 1', battery: '20%', switchStatus: true},
+    { id: '3', model: 'blub 1', battery: '10%', switchStatus: false},
+    { id: '4', model: 'blub 1', battery: '20%', switchStatus: false},
+    { id: '5', model: 'blub 1', battery: '10%', switchStatus: false},
+]
 export const List =[
     // Arm Raise Exercises 
     {id: '1', category: 'Arm Raise', exercise: 'Firm Surface'},
